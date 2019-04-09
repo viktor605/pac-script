@@ -1,7 +1,7 @@
 // -*-javascript-*-
 // ~/.pac: Proxy Auto-Config file
 
-var tor = "SOCKS5 localhost:9050";
+var tor = "HTTP localhost:3128";
 
 var censoredHosts = ["dc-abills-01.dnrtele.com",
                      "archive.org",
@@ -10,9 +10,6 @@ var censoredHosts = ["dc-abills-01.dnrtele.com",
 
 function FindProxyForURL(url, host)
 {
-
-    if (dnsDomainIs(host, ".onion"))
-        return tor;
 
     for (var censoredHost of censoredHosts) {
         if (host === censoredHost || dnsDomainIs(host, "." + censoredHost))
