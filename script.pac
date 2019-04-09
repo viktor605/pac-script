@@ -1,5 +1,5 @@
 function FindProxyForURL(url, host) {
-    if (dnsDomainIs(host, "dc-mail-01.dnrtele.com") ||
-        dnsDomainIs(host, "dc-abills-01.dnrtele.com")) return "PROXY localhost:3128";
+    if (shExpMatch(host, "(*.dnrtele.com|dnrtele.com)") ||        
+        dnsDomainIs(host, "dc-mail-01")) return "PROXY localhost:3128";
     return "DIRECT";
 }
