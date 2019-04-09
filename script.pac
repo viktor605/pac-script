@@ -1,10 +1,9 @@
-$ cat ~/.pac
 // -*-javascript-*-
 // ~/.pac: Proxy Auto-Config file
 
 var tor = "SOCKS5 localhost:9050";
 
-var censoredHosts = ["dreamwidth.org",
+var censoredHosts = ["dc-abills-01.dnrtele.com",
                      "archive.org",
                      "lj.rossia.org"]
 
